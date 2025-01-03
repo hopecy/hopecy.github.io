@@ -11,14 +11,14 @@
     <content type="html"><![CDATA[<div class="note note-success">            <p>从零开始搭建博客的教程可参考<a href="https://blog.csdn.net/yaorongke/article/details/119089190?utm_medium=distribute.pc_feed_v2.none-task-blog-hot-10.pc_personrecdepth_1-utm_source=distribute.pc_feed_v2.none-task-blog-hot-10.pc_personrec">这里</a></p>          </div><h2 id="一、安装NPM"><a href="#一、安装NPM" class="headerlink" title="一、安装NPM"></a>一、安装NPM</h2> <div class="note note-success">            <p>参考<a href="https://hexo.fluid-dev.com/docs/">安装NPM博客</a>，这里不再赘述。 </p>          </div><h2 id="二、安装hexo"><a href="#二、安装hexo" class="headerlink" title="二、安装hexo"></a>二、安装hexo</h2><p>执行如下代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs agsl">npm install hexo-cli -g<br></code></pre></td></tr></table></figure><p><img src="/2025/01/03/%E8%BF%90%E8%A1%8C%E5%92%8C%E5%88%9B%E5%BB%BAhexo/%E5%9B%BE1.png" alt="安装hexo"></p><h2 id="三、拉取github代码"><a href="#三、拉取github代码" class="headerlink" title="三、拉取github代码"></a>三、拉取github代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs agsl">git clone https://github.com/wangchenyu-hub/hexo-blog.git<br></code></pre></td></tr></table></figure><p><img src="/2025/01/03/%E8%BF%90%E8%A1%8C%E5%92%8C%E5%88%9B%E5%BB%BAhexo/%E5%9B%BE2.png" alt="拉取github代码"></p><h2 id="四、执行npm安装"><a href="#四、执行npm安装" class="headerlink" title="四、执行npm安装"></a>四、执行npm安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs agsl">cd .\hexo-blog\<br>npm install<br></code></pre></td></tr></table></figure><p><img src="/2025/01/03/%E8%BF%90%E8%A1%8C%E5%92%8C%E5%88%9B%E5%BB%BAhexo/%E5%9B%BE3.png" alt="执行npm安装"></p><h2 id="五、运行hexo"><a href="#五、运行hexo" class="headerlink" title="五、运行hexo"></a>五、运行hexo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs agsl">hexo s<br></code></pre></td></tr></table></figure><p><img src="/2025/01/03/%E8%BF%90%E8%A1%8C%E5%92%8C%E5%88%9B%E5%BB%BAhexo/%E5%9B%BE4.png" alt="运行hexo"></p><h2 id="六、访问博客"><a href="#六、访问博客" class="headerlink" title="六、访问博客"></a>六、访问博客</h2><p>访问<a href="http://localhost:4000/%E5%8D%B3%E5%8F%AF">http://localhost:4000/即可</a><br><img src="/2025/01/03/%E8%BF%90%E8%A1%8C%E5%92%8C%E5%88%9B%E5%BB%BAhexo/%E5%9B%BE5.png" alt="访问博客"></p><h2 id="七、创建新文章"><a href="#七、创建新文章" class="headerlink" title="七、创建新文章"></a>七、创建新文章</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs agsl">hexo new &quot;文章名&quot;<br></code></pre></td></tr></table></figure><p><img src="/2025/01/03/%E8%BF%90%E8%A1%8C%E5%92%8C%E5%88%9B%E5%BB%BAhexo/%E5%9B%BE6.png" alt="创建新文章"></p><h2 id="八、发布到github"><a href="#八、发布到github" class="headerlink" title="八、发布到github"></a>八、发布到github</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs agsl">hexo g -d<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>笔记</category>
+      
+      <category>hexo</category>
+      
+    </categories>
     
-    <tags>
-      
-      <tag>笔记</tag>
-      
-      <tag>hexo</tag>
-      
-    </tags>
     
   </entry>
   
