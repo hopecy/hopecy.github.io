@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wangchenyu-hub.github.io/2025/01/03/Hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/%E5%9B%BE1.png">
 <meta property="article:published_time" content="2025-01-03T09:40:54.000Z">
-<meta property="article:modified_time" content="2025-01-06T05:56:31.432Z">
+<meta property="article:modified_time" content="2025-01-06T06:01:21.179Z">
 <meta property="article:author" content="王晨雨">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://wangchenyu-hub.github.io/2025/01/03/Hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/%E5%9B%BE1.png">
@@ -230,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          426 字
+          429 字
         
       </span>
     
@@ -292,7 +292,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-01-06T13:56:31+08:00
+                    本文最后更新于 2025-01-06T14:01:21+08:00
                   
                   
 
@@ -319,7 +319,7 @@
 <ul>
 <li><strong>注意</strong>： xxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，将想引入的图片就只需要放入xxx这个文件夹内即可。</li>
 </ul>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>插入图片后，发现图片无法显示，此时需要检查一下网页的源代码如下：</p>
+<h2 id="问题并解决"><a href="#问题并解决" class="headerlink" title="问题并解决"></a>问题并解决</h2><p>插入图片后，发现图片无法显示，此时需要检查一下网页的源代码如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html">/.io//image-20210922130821755.png<br></code></pre></td></tr></table></figure>
 
 <p>经过查找问题出在 项目根目录<code>/node_modules/hexo-asset-image/index.js</code>的23行左右</p>
@@ -327,7 +327,7 @@
 
 <p>发现 这个走了 else 分支导致的，我们把 <code>link.lastIndexOf(&#39;.&#39;)</code> 修改为 <code>link.lastIndexOf(&#39;/&#39;)</code> 即可 修改后</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">if</span> (<span class="hljs-regexp">/.*\/index\.html$/</span>.<span class="hljs-title function_">test</span>(link)) &#123;<br>    <span class="hljs-comment">// when permalink is end with index.html, for example 2019/02/20/xxtitle/index.html</span><br>    <span class="hljs-comment">// image in xxtitle/ will go to xxtitle/index/</span><br>    appendLink = <span class="hljs-string">&#x27;index/&#x27;</span>;<br>    <span class="hljs-keyword">var</span> endPos = link.<span class="hljs-title function_">lastIndexOf</span>(<span class="hljs-string">&#x27;/&#x27;</span>);<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-keyword">var</span> endPos = link.<span class="hljs-title function_">lastIndexOf</span>(<span class="hljs-string">&#x27;/&#x27;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>如下图：<br><img src="/2025/01/03/Hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/%E5%9B%BE1.png" srcset="/img/loading.gif" lazyload alt="图1.png"><br>重新 清理运行 ： hexo clean &amp; hexo g</p>
+<p>如下图：<br><img src="/2025/01/03/Hexo%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/%E5%9B%BE1.png" srcset="/img/loading.gif" lazyload alt="图1"><br>重新清理运行 ： <code>hexo clean &amp; hexo g</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html">/2021/09/18/hello-world/image-20210922130821755.png<br></code></pre></td></tr></table></figure>
 <p>最后图片正常展示</p>
 
